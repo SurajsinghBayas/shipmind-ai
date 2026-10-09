@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ShipMind AI
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.2-black?logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)](https://typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?logo=tailwindcss)](https://tailwindcss.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+**AI-powered developer productivity platform.** Manage projects, track tasks, collaborate with your team, and ship faster — with an AI mentor guiding every step.
+
+---
+
+## Features
+
+- **Project management** — create and organize projects with full task lifecycle tracking
+- **AI mentor** — contextual AI guidance and code review built into your workflow
+- **GitHub integration** — link repositories, track pull requests, and sync issues directly from the dashboard
+- **Team collaboration** — invite teammates, assign tasks, and manage workload across projects
+- **Analytics** — visualize velocity, completion rates, and team productivity over time
+- **Fluid UI** — smooth animations powered by GSAP and Framer Motion
+
+---
+
+## Dashboard
+
+| Module      | Description                                         |
+|-------------|-----------------------------------------------------|
+| Projects    | Create and manage all active projects               |
+| Tasks       | Kanban-style task board with priority and status    |
+| GitHub      | Linked repos, open PRs, and issue tracking          |
+| Team        | Member management and role assignments              |
+| Mentor      | AI-powered guidance, code review, and suggestions   |
+| Analytics   | Sprint velocity, burndown, and team health metrics  |
+
+---
+
+## Tech Stack
+
+| Layer      | Technology                                              |
+|------------|---------------------------------------------------------|
+| Framework  | Next.js 16.2 (App Router)                               |
+| Language   | TypeScript                                              |
+| Styling    | Tailwind CSS                                            |
+| Animation  | GSAP + Framer Motion                                    |
+| UI         | Radix Base UI, Lucide Icons, cmdk                       |
+| Data       | TanStack Query                                          |
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── dashboard/
+│   │   ├── analytics/     # Productivity metrics
+│   │   ├── github/        # Repository and PR tracking
+│   │   ├── mentor/        # AI assistant
+│   │   ├── projects/      # Project management
+│   │   ├── tasks/         # Task board
+│   │   └── team/          # Team members
+│   └── page.tsx           # Landing page
+├── components/            # Shared UI components
+├── hooks/                 # Custom React hooks
+└── lib/                   # Utilities and config
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See `.env.example` for all required configuration values.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by [Suraj Bayas](https://github.com/SurajsinghBayas)
